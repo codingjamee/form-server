@@ -14,8 +14,10 @@ const submitResponse = (req, res) => {
 
 const getResponses = (req, res) => {
   const formId = req.params.formId;
+  const getFormData = `forms_${formId}`;
   const responses = readDataFromFile("responses.json");
-  if (responses && responses[formId]) {
+  console.log(responses[getFormData]);
+  if (responses && responses[getFormData]) {
     res.json(responses[formId]);
   } else {
     res.status(404).json({ message: "Form not found" });

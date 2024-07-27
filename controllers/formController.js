@@ -13,13 +13,14 @@ const createForm = (req, res) => {
   res.status(201).json({ formId, message: "Form created successfully" });
 };
 
-const getForm = (req, res) => {
+const getForm = async (req, res) => {
   const formId = req.params.formId;
-  const forms = readDataFromFile("forms.json");
-  if (forms && forms[formId]) {
-    res.json(forms[formId]);
+  const getFormData = `form_${formId}`;
+  const forms = await readDataFromFile("forms.json");
+  if (forms && forms[getFormData]) {
+    res.json(forms[getFormData]);
   } else {
-    res.status(404).json({ message: "Form not found" });
+    res.status(404).json({ message: "Form not found at getForm" });
   }
 };
 
