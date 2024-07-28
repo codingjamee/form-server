@@ -14,7 +14,7 @@ const createForm = (req, res) => {
 };
 
 const getForm = async (req, res) => {
-  const formId = req.params.formId;
+  const formId = req.query.formId;
   const getFormData = `form_${formId}`;
   const forms = await readDataFromFile("forms.json");
   if (forms && forms[getFormData]) {
