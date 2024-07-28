@@ -1,6 +1,7 @@
 const express = require("express");
-const formRoutes = require("./routes/formRoutes");
-const responseRoutes = require("./routes/responseRoutes");
+
+const adminRoutes = require("./routes/adminRoutes");
+const userRoutes = require("./routes/userRoutes");
 
 const app = express();
 const port = 3000;
@@ -8,8 +9,8 @@ const port = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/forms", formRoutes);
-app.use("/forms", responseRoutes);
+app.use("/admin", adminRoutes);
+app.use("/user", userRoutes);
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
