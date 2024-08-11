@@ -1,13 +1,13 @@
 const { writeDataToFile, readDataFromFile } = require("../utils/fileUtils");
 
 const submitResponse = (req, res) => {
-  const formId = req.params.formId;
+  const formId = `responses_${req.query.formId}`;
   const responseData = req.body;
   const responses = readDataFromFile("responses.json") || {};
-  if (!responses[formId]) {
-    responses[formId] = [];
+  if (!responses) {
+    responses = {};
   }
-  responses[formId].push(responseData);
+  responses[formId] = responseData;
   writeDataToFile("responses.json", responses);
   res.status(201).json({ message: "Response submitted successfully" });
 };
