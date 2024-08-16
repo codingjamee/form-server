@@ -1,0 +1,60 @@
+{
+  "1722068197951": {
+    "responseCount": 1,
+    "title": "비 올때 가장 해보고 싶은 것",
+    "responses": [
+      {
+        "id": "01J3SM1BHSZY9QV1YH9JR32Z37",
+        "title": "보고싶은 영화 카테고리",
+        "answers": [
+          {
+            "id": "01J3SM1BHS7X441KMED2MXFNQM",
+            "title": "액션",
+            "count": 0
+          },
+          {
+            "id": "01J3SM510HP40Z7JX9N70NVSP0",
+            "title": "스릴러",
+            "count": 0
+          },
+          {
+            "id": "01J3SM562GD2P3AVSQYNGS0CCX",
+            "title": "코미디",
+            "count": 0
+          },
+          {
+            "id": "01J3SM562GD2P3AVSQYNGS0XSY",
+            "title": "판타지",
+            "count": 1
+          },
+          {
+            "id": "01J3SM562GD2P3AZSQYNGS0XYS",
+            "title": "로맨스",
+            "count": 0
+          }
+        ]
+      },
+      {
+        "id": "01J3SM58KRQ0A53M68S7TZX2FE",
+        "title": "먹고싶은 음식",
+        "answers": [
+          {
+            "id": "01J3SM58KRDHFPTNXWFW0SBTX7",
+            "title": "전 종류",
+            "count": 0
+          },
+          {
+            "id": "01J3SM5T00SMBH9MQDKF5ZM5ZG",
+            "title": "찌개류",
+            "count": 1
+          },
+          {
+            "id": "01J3SM5Y1N8FW4ATA234CXAPPJ",
+            "title": "분식류",
+            "count": 0
+          }
+        ]
+      }
+    ]
+  }
+}

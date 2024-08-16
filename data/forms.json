@@ -147,21 +147,29 @@
     "forms": [
       {
         "id": "01J3SM1BHSZY9QV1YH9JR32Z37",
-        "title": "보고싶은 영화",
+        "title": "보고싶은 영화 카테고리",
         "required": false,
         "type": "1",
         "asks": [
           {
             "id": "01J3SM1BHS7X441KMED2MXFNQM",
-            "title": "\"노트북\" (The Notebook)"
+            "title": "액션"
           },
           {
             "id": "01J3SM510HP40Z7JX9N70NVSP0",
-            "title": "\"시애틀의 잠 못 이루는 밤\" (Sleepless in Seattle)"
+            "title": "스릴러"
           },
           {
             "id": "01J3SM562GD2P3AVSQYNGS0CCX",
-            "title": ""
+            "title": "코미디"
+          },
+          {
+            "id": "01J3SM562GD2P3AVSQYNGS0XSY",
+            "title": "판타지"
+          },
+          {
+            "id": "01J3SM562GD2P3AZSQYNGS0XYS",
+            "title": "로맨스"
           }
         ]
       },

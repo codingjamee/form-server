@@ -24,7 +24,19 @@ const getForm = async (req, res) => {
   }
 };
 
+const getFormLists = async (req, res) => {
+  const formLists = await readDataFromFile("forms.json");
+  const listKeys = Object.keys(formLists);
+  const withoutPrefix = listKeys.map((key) => ({
+    key: key.split("_")[1],
+    title: formLists[key].formTitle,
+  }));
+  console.log(listKeys);
+  res.status(200).json(withoutPrefix);
+};
+
 module.exports = {
   createForm,
   getForm,
+  getFormLists,
 };

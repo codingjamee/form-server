@@ -1,6 +1,6 @@
 const express = require("express");
 const { getResponses } = require("../controllers/responseController");
-const { createForm } = require("../controllers/formController");
+const { createForm, getFormLists } = require("../controllers/formController");
 
 const router = express.Router();
 
@@ -8,5 +8,7 @@ const router = express.Router();
 router.post("/forms", createForm);
 //form에 대한 응답 get
 router.get("/responses", getResponses);
+//form들 목록 
+router.get("/forms", getFormLists);
 
 module.exports = router;
