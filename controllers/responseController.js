@@ -70,52 +70,45 @@ const submitResponse = (req, res) => {
   res.status(201).json({ message: "Response submitted successfully" });
 };
 
-const getResponses = (req, res) => {
-  const formId = req.query.formId;
-  console.log("req 요청", formId);
-  const getFormData = `responses_${formId}`;
-  const responses = readDataFromFile("responses.json");
-  console.log(responses[getFormData]);
-  if (responses) {
-    if (responses[getFormData]) {
-      const foundForms = readDataFromFile("forms.json");
-      const formsData = foundForms[`form_${formId}`];
-      const populatedForm = responses[getFormData].map((form) => ({
-        ...form,
-        title: formsData.formTitle.title,
-        answers: form.answers.map((answerId) => {
-          const foundFormAsksData = formsData.forms.find((form) => form.id);
-          return {
-            id: answerId,
-            title: foundFormAsksData.asks.find((form) => form.id).title,
-          };
-        }),
-      }));
+// const getResponses = (req, res) => {
+//   const formId = req.query.formId;
+//   console.log("req 요청", formId);
+//   const getFormData = `responses_${formId}`;
+//   const responses = readDataFromFile("responses.json");
+//   console.log(responses[getFormData]);
+//   if (responses) {
+//     if (responses[getFormData]) {
+//       const foundForms = readDataFromFile("forms.json");
+//       const formsData = foundForms[`form_${formId}`];
+//       const populatedForm = responses[getFormData].map((form) => ({
+//         ...form,
+//         title: formsData.formTitle.title,
+//         answers: form.answers.map((answerId) => {
+//           const foundFormAsksData = formsData.forms.find((form) => form.id);
+//           return {
+//             id: answerId,
+//             title: foundFormAsksData.asks.find((form) => form.id).title,
+//           };
+//         }),
+//       }));
 
-      return res.status(200).json(populatedForm);
-    }
-    res.status(200).json({ message: "Form data not found" });
-  } else {
-    res.status(404).json({ message: "Form not found" });
-  }
-};
+//       return res.status(200).json(populatedForm);
+//     }
+//     res.status(200).json({ message: "Form data not found" });
+//   } else {
+//     res.status(404).json({ message: "Form not found" });
+//   }
+// };
 
 const getResponseSummary = (req, res) => {
-  const formId = req.params.formId;
-  const responses = readDataFromFile("responses.json");
-  if (responses && responses[formId]) {
-    const totalResponses = responses[formId].length;
-    const genderDistribution = responses[formId].reduce((acc, response) => {
-      const gender = response.gender;
-      if (gender) {
-        acc[gender] = (acc[gender] || 0) + 1;
-      }
-      return acc;
-    }, {});
+  console.log("요약 응답 보냄");
+  const formId = req.query.formId;
+  const summary = readDataFromFile("responseSummary.json");
+  if (summary && summary[formId]) {
+    console.log(summary);
 
     res.status(200).json({
-      totalResponses,
-      genderDistribution,
+      data: summary[formId],
     });
   } else {
     res.status(404).json({ message: "Form not found" });
@@ -124,6 +117,5 @@ const getResponseSummary = (req, res) => {
 
 module.exports = {
   submitResponse,
-  getResponses,
   getResponseSummary,
 };
