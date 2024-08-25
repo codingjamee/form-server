@@ -1,6 +1,6 @@
 {
   "1722068197951": {
-    "responseCount": 1,
+    "responseCount": 3,
     "title": "비 올때 가장 해보고 싶은 것",
     "responses": [
       {
@@ -9,30 +9,31 @@
         "answers": [
           {
             "id": "01J3SM1BHS7X441KMED2MXFNQM",
-            "title": "액션",
-            "count": 0
+            "name": "액션",
+            "value": 0
           },
           {
             "id": "01J3SM510HP40Z7JX9N70NVSP0",
-            "title": "스릴러",
-            "count": 0
+            "name": "스릴러",
+            "value": 2
           },
           {
             "id": "01J3SM562GD2P3AVSQYNGS0CCX",
-            "title": "코미디",
-            "count": 0
+            "name": "코미디",
+            "value": 1
           },
           {
             "id": "01J3SM562GD2P3AVSQYNGS0XSY",
-            "title": "판타지",
-            "count": 1
+            "name": "판타지",
+            "value": 1
           },
           {
             "id": "01J3SM562GD2P3AZSQYNGS0XYS",
-            "title": "로맨스",
-            "count": 0
+            "name": "로맨스",
+            "value": 1
           }
-        ]
+        ],
+        "count": 1
       },
       {
         "id": "01J3SM58KRQ0A53M68S7TZX2FE",
@@ -40,25 +41,26 @@
         "answers": [
           {
             "id": "01J3SM58KRDHFPTNXWFW0SBTX7",
-            "title": "전 종류",
-            "count": 0
+            "name": "전 종류",
+            "value": 0
           },
           {
             "id": "01J3SM5T00SMBH9MQDKF5ZM5ZG",
-            "title": "찌개류",
-            "count": 1
+            "name": "찌개류",
+            "value": 2
           },
           {
             "id": "01J3SM5Y1N8FW4ATA234CXAPPJ",
-            "title": "분식류",
-            "count": 0
+            "name": "분식류",
+            "value": 1
           }
-        ]
+        ],
+        "count": 1
       }
     ]
   },
   "1723356284167": {
-    "responseCount": 1,
+    "responseCount": 2,
     "title": "설문지 test",
     "responses": [
       {
@@ -67,15 +69,16 @@
         "answers": [
           {
             "id": "01J500HTCN68ABCH5XWS5H154N",
-            "title": "옵션1",
-            "count": 1
+            "name": "옵션1",
+            "value": 0
           },
           {
             "id": "01J500JE06QSMFXW6C13FZ7E78",
-            "title": "옵션2",
-            "count": 0
+            "name": "옵션2",
+            "value": 2
           }
-        ]
+        ],
+        "count": 1
       },
       {
         "id": "01J500JQXCH08SZ6B79Y82TA96",
@@ -83,15 +86,16 @@
         "answers": [
           {
             "id": "01J500JQXD2F67SDT8Z69Q8M9B",
-            "title": "체크박스 test",
-            "count": 1
+            "name": "체크박스 test",
+            "value": 1
           },
           {
             "id": "01J500KBM1F8JJJ5S620MNJP3A",
-            "title": "체크박스 test2",
-            "count": 0
+            "name": "체크박스 test2",
+            "value": 1
           }
-        ]
+        ],
+        "count": 1
       },
       {
         "id": "01J500KKS01TQCB26FKARZJA2X",
@@ -99,10 +103,11 @@
         "answers": [
           {
             "id": "01J500KKS0G5J3ENMC10073T9P",
-            "title": "",
-            "count": 0
+            "name": "",
+            "value": 0
           }
-        ]
+        ],
+        "count": 1
       }
     ]
   }

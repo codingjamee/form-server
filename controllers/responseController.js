@@ -33,9 +33,10 @@ const saveCountData = async (formId, responseData) => {
           title: form.title,
           answers: form.asks.map((answer) => ({
             id: answer.id,
-            title: answer.title,
-            count: 0,
+            name: answer.title,
+            value: 0,
           })),
+          count: 1,
         };
       }),
     };
@@ -47,9 +48,10 @@ const saveCountData = async (formId, responseData) => {
         if (resAnswer && data.answers) {
           data.answers.forEach((answer) => {
             if (resAnswer.id === answer) {
-              resAnswer.count++;
+              resAnswer.value++;
             }
           });
+          data.count++;
         }
         return resAnswer;
       });
